@@ -1,5 +1,5 @@
 
-%% load ephys??
+%% load ephys
 [Filename,openmatpath]=uigetfile('*.mat;','Please select raw ephys file to open');
 cd(openmatpath)
 load(char(Filename))
