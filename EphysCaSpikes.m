@@ -1,5 +1,5 @@
 
-%% load ephys
+% load ephys
 [Filename,openmatpath]=uigetfile('*.mat;','Please select raw ephys file to open');
 cd(openmatpath)
 load(char(Filename))
@@ -8,7 +8,7 @@ figure;
 plot(ephys);axis([-inf inf -inf inf])
 %raw
 
-%% filter
+% filter
 
 % select portion
 ephys1=ephys;
@@ -32,7 +32,7 @@ Fs=10000; t = (0:length(q)-1)/Fs;
 [f2 fftdata2]=fftshow(q2,10000);suptitle( ' 2Hz notch filter ')
 close
 
-% %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % tiff IMAGE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -62,7 +62,7 @@ b=a-mean(a);
 % figure; plot(b);title(filename)
 
 
-%% 1.Plotting ephys and calcium together
+% 1.Plotting ephys and calcium together
 figure; 
 i=(1:length(ephys))/Fs;
 ha(1)=subplot(211); plot(i,q);axis([-inf inf -inf inf]); title(filename,'FontSize', 9);xlabel('Time (s)');
