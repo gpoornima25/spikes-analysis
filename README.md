@@ -1,1 +1,1 @@
-# spikes-analysis
+# spike detection in time series data
